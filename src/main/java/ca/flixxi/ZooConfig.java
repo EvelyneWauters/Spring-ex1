@@ -1,5 +1,6 @@
 package ca.flixxi;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -7,5 +8,13 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class ZooConfig {
+    @Bean
+    public Zoo zoo()    {
+        Zoo krugerPark = new ZooImpl("KrugerPark");
+        krugerPark.addAnimal(new Sloth("Billie"));
+        krugerPark.addAnimal(new Snake("Sheldon"));
+        krugerPark.addAnimal(new SillyBug("Babe"));
 
+        return krugerPark;
+    }
 }

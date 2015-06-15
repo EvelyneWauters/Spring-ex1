@@ -9,8 +9,7 @@ public class ZooImpl implements Zoo {
     private String name;
     private List<Animal> animals;
 
-    public ZooImpl(String name, List<Animal> animals) {
-        this.animals = animals;
+    public ZooImpl(String name) {
         this.name = name;
     }
 
