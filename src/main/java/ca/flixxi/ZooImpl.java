@@ -1,5 +1,6 @@
 package ca.flixxi;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,7 +8,7 @@ import java.util.List;
  */
 public class ZooImpl implements Zoo {
     private String name;
-    private List<Animal> animals;
+    private List<Animal> animals= new ArrayList<>();
 
     public ZooImpl(String name) {
         this.name = name;
@@ -15,7 +16,7 @@ public class ZooImpl implements Zoo {
 
     @Override
     public void addAnimal(Animal a) {
-        animals.add(a);
+        this.animals.add(a);
     }
 
     @Override
